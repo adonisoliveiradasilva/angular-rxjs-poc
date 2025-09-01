@@ -1,0 +1,19 @@
+<div class="side-bar-content">
+    <div class="side-bar-content-top">
+        Angular RXJS
+    </div>
+    
+    <!-- Teste de ícones -->
+    <div style="color: white; padding: 10px; font-size: 20px;">
+        <i class="fas fa-home"></i> Home
+        <i class="fas fa-user"></i> User
+        <i class="fas fa-star"></i> Star
+    </div>
+    
+    <div class="side-bar-content-middle">
+        <div class="item" *ngFor="let item of getNavBarItems">
+            <i class="fas fa-user"></i>
+            <span> {{ item.label }} </span>
+        </div>
+    </div>
+</div>

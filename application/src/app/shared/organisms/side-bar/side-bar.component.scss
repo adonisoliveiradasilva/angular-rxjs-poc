@@ -1,0 +1,54 @@
+@import '../../../../styles.scss';
+
+.side-bar-content{
+    width: clamp(200px, 20vw, 400px);
+    height: 100%;
+    background-color: var(--color-primary-base);
+    @include flex-center-top;
+    @include gap-2;
+
+    .side-bar-content-top, .side-bar-content-middle{
+        width: 100%;
+        font-weight: 400;
+    }
+
+    .side-bar-content-top{
+        @include flex-center;
+        @include font-size-larger;
+        @include padding-2;
+        color: var(--color-surface-light)
+    }
+
+    .side-bar-content-middle{
+        @include flex-center-top;
+        @include font-size-medium;
+        @include gap-1;
+        padding-left: 10%;
+
+        .item{
+            width: 100%;
+            padding-left: 10%;
+            @include flex-left;
+            height: clamp(20px, 5vh, 40px);
+            border-bottom-left-radius: 3vh;
+            border-top-left-radius: 3vh;
+            color: var(--color-surface-light);
+            cursor: pointer;
+            
+            i {
+                margin-right: 10px;
+                font-size: 16px;
+                display: inline-block !important;
+                visibility: visible !important;
+                opacity: 1 !important;
+                color: inherit !important;
+            }
+            
+            &:hover{
+                color: var(--color-primary-base);
+                background-color: var(--color-surface-default);
+            }
+        }
+    }
+
+}
