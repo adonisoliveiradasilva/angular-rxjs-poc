@@ -4,14 +4,13 @@ import { RouterOutlet } from '@angular/router';
 import { SideBarComponent } from './shared/organisms/side-bar/side-bar.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, 
-    RouterOutlet,
-    SideBarComponent
-  ],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    imports: [CommonModule,
+        RouterOutlet,
+        SideBarComponent
+    ],
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'Angular RXJS';
