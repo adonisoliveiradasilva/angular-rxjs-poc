@@ -1,7 +1,7 @@
-@import '../styles.scss';
+@use '../styles.scss' as *;
 
 .app-content{
     width: 100vw;
     height: 100vh;
-    background-color: var(--color-surface-default);
+    background-image: linear-gradient(180deg, var(--color-background-1), var(--color-background-2));
 }

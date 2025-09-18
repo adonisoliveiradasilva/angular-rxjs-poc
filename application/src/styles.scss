@@ -1,4 +1,4 @@
-@import 'assets/fonts/fontFace.scss';
+@use 'assets/fonts/fontFace.scss' as *;
 
 $green-color-2: #0A4647;
 $white-color-1: #F4FAF8;
@@ -8,17 +8,14 @@ $info-color: #4fa0e2;
 $warning-color: #cf9133;
     
 :root {
-    --color-surface-default: #DEEBFD;
-    --color-surface-overlay: rgba(7, 51, 52, .5);
-    --color-surface-light: #F5FAFE;
-    --color-surface-dark: rgb(128, 128, 128);
-    --color-surface-muted: rgb(230, 230, 230);
-    --color-primary-accent: rgb(112, 146, 147);
-    --color-primary-base: rgb(86, 81, 171);
-    --color-surface-secondary: rgb(228, 228, 228);
+    --color-surface-default: #f32179;
+    --color-background-1: rgba(29, 29, 29, 1);
+    --color-background-2: rgba(29, 29, 29, .7);
+    --color-surface-overlay: rgba(71, 71, 71, .8);
   
-    --color-text-default: rgb(33, 33, 33);
-    --color-text-title: #3d4789;
+    --color-text-default: rgba(164, 172, 188, 1);
+    --color-text-title: rgba(255, 255, 255, 1);
+    --color-text-overlay:rgba(71, 71, 71, 1);
 }
 
 
@@ -68,8 +65,9 @@ body, * {
 
 @mixin flex-space-between{
     display: flex;
-    align-items: stretch;
+    align-items: center;
     justify-content: space-between;
+    flex-direction: row;
 }   
 
 @mixin flex-space-between-column{
@@ -81,7 +79,7 @@ body, * {
 
 @mixin flex-center-top {
     display: flex;
-    align-items: stretch;
+    align-items: center;
     justify-content: flex-start;
     flex-direction: column;
 }
@@ -113,11 +111,11 @@ body, * {
 }
 
 @mixin shadow-bottom {
-    box-shadow: 0 -10px 15px 0 var(--color-text-default);
+    box-shadow: 0 -10px 15px 0 var(--color-text-overlay);
 }
 
 @mixin shadow-bottom-left {
-    box-shadow: 0 -10px 15px 0 var(--color-text-default);
+    box-shadow: 0 -10px 15px 0 var(--color-text-overlay);
 }
 
 @mixin padding-1 {
@@ -158,8 +156,8 @@ body, * {
     border-radius: clamp(16px, 3vh, 32px);
 }
 
-.mat-mdc-menu-panel {
-    background-color: var(--color-surface-light) !important;
+@mixin transition {
+    transition: all 0.3s ease;
 }
 
 .modal-overlay {
@@ -177,7 +175,7 @@ body, * {
     @include padding-2;
 
     .modal-container {
-        background-color: var(--color-surface-light);
+        background-color: var(--color-text-overlay);
         @include border-radius-2;
         @include padding-2;
         width: clamp(300px, 70%, 1000px);
@@ -186,5 +184,4 @@ body, * {
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     }
 }
-
 

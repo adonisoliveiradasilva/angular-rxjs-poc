@@ -1,1 +1,4 @@
-<p>item works!</p>
+<div class="item-content">
+    <fa-icon [icon]="item.faIcon"></fa-icon>
+    <span *ngIf="menuOpenState$ | async"> {{ item.label }} </span>
+</div>

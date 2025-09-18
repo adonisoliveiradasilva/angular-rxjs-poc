@@ -1,0 +1,18 @@
+@use '../../../../../styles.scss' as *;
+
+.item-content {
+    width: 100%;
+    padding: 0rem 1rem;
+    @include flex-left;
+    height: 3rem;
+    border-radius: 1rem;
+    color: var(--color-text-default);;
+    cursor: pointer;
+    @include gap-1;
+    position: relative;
+
+    &:hover {
+        color: var(--color-surface-default);
+        background-color: var(--color-text-overlay);
+    }
+}
