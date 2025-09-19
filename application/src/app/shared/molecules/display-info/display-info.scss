@@ -1,0 +1,9 @@
+@use '../../../../styles.scss' as *;
+
+.display-info-content{
+    width: 100%;
+    height: auto;
+    @include flex-left-top;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}

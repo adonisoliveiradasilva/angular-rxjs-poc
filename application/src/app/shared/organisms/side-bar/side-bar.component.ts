@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { navBarItems } from '../../../core/data/side-bar-items';
+import { navBarItems } from '../../../core/data/side-bar-items.data';
 import { ILink } from '../../../core/models/ILink.model';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ItemComponent } from '../../atoms/side-bar/item/item.component';

@@ -1,1 +1,11 @@
-<p>autocomplete works!</p>
+<div class="autocomplete">
+  <input
+    type="text"
+    [formControl]="searchControl"
+    placeholder="Digite para buscar..."
+  />
+
+  <ul *ngIf="results$ | async as results">
+    <li *ngFor="let result of results">{{ result }}</li>
+  </ul>
+</div>

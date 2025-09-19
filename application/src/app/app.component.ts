@@ -1,25 +1,26 @@
 import { Component, inject } from '@angular/core';
 import { SideBarComponent } from './shared/organisms/side-bar/side-bar.component';
 import { Router, RouterOutlet } from '@angular/router';
-import { DisplayTitle } from './shared/atoms/app-display/display-title/display-title';
-import { navBarItems } from './core/data/side-bar-items';
 import { ILink } from './core/models/ILink.model';
+import { DisplayInfo } from './shared/molecules/display-info/display-info';
+import { DEFAULT_DISPLAY_INFO, IDisplayInfo } from './core/models/IDisplayInfo.model';
+import { displayInfoArray } from './core/data/display-info.data';
 
 @Component({
     selector: 'app-root',
-    imports: [SideBarComponent, RouterOutlet, DisplayTitle],
+    imports: [SideBarComponent, RouterOutlet, DisplayInfo],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'Angular RXJS';
-  
+  displayInfo!: IDisplayInfo;
   private _router = inject(Router)
 
-  get getRouteLabel(): string{
-    return navBarItems.find((item: ILink) => {
+  get getDisplayInfo(): IDisplayInfo{
+    return displayInfoArray.find((item: IDisplayInfo) => {
       return this._router.url.includes(item.slug)
-    })?.label ?? ''
+    }) ?? DEFAULT_DISPLAY_INFO
   }
 
 
