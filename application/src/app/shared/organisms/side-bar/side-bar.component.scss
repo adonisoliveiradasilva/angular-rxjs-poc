@@ -2,7 +2,7 @@
 
 .side-bar-content {
     width: 5rem;
-    height: 100%;
+    height: 100vh;
     background-color: var(--color-surface-overlay);
     @include flex-center-top;
     @include gap-2;

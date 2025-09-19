@@ -6,6 +6,7 @@ import { ItemComponent } from '../../atoms/side-bar/item/item.component';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { MenuOpen } from '../../../core/states/menu-open';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-side-bar',
@@ -14,6 +15,7 @@ import { CommonModule } from '@angular/common';
     styleUrl: './side-bar.component.scss'
 })
 export class SideBarComponent {
+  private _router = inject(Router)
   menuOpenService = inject(MenuOpen)
   menuOpenState$ = this.menuOpenService.menuOpenState$;
 
@@ -26,5 +28,9 @@ export class SideBarComponent {
 
   toggleMenuOpen(){
     this.menuOpenService.toggle()
+  }
+
+  navigate(slug: string){
+    this._router.navigate([slug])
   }
 }

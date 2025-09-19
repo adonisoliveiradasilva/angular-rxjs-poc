@@ -7,7 +7,7 @@
   <div class="side-bar-content-middle">
 
     @for (item of getNavBarItems; track item) {
-      <app-item [item]="item"></app-item>
+      <app-item [item]="item" (click)="navigate(item.slug)"></app-item>
     }
   </div>
 </div>

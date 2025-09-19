@@ -1,4 +1,4 @@
-<div class="item-content">
+<div class="item-content" [ngClass]="{ 'activated-item': getSameCurrentRouter }">
     <fa-icon [icon]="item.faIcon"></fa-icon>
     <span *ngIf="menuOpenState$ | async"> {{ item.label }} </span>
 </div>

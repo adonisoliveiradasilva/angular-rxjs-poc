@@ -1,4 +1,7 @@
 <div class="app-content">
   <app-side-bar></app-side-bar>
-  <!-- <router-outlet></router-outlet> -->
+  <div class="app-display">
+    <app-display-title [label]="getRouteLabel"></app-display-title>
+    <router-outlet></router-outlet>
+  </div>
 </div>
