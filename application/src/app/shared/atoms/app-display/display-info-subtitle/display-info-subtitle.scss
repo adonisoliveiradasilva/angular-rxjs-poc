@@ -1,8 +1,10 @@
 @use '../../../../../styles.scss' as *;
 
-h2{
+h3{
     color: var(--color-text-title); 
     font-weight: 500;
+    width: clamp(35rem, 50%, 70rem);
+    min-width: 35rem;
 
     b{
         color: var(--color-surface-default)!important; 

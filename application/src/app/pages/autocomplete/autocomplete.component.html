@@ -1,11 +1,15 @@
 <div class="autocomplete">
-  <input
+  <!-- <input
     type="text"
     [formControl]="searchControl"
     placeholder="Digite para buscar..."
-  />
+  /> -->
+  <app-autocomplete-input (slugItem)="handleSlug($event)"></app-autocomplete-input>
 
-  <ul *ngIf="results$ | async as results">
+  <span>
+    {{ getDescription }}
+  </span>
+  <!-- <ul *ngIf="results$ | async as results">
     <li *ngFor="let result of results">{{ result }}</li>
-  </ul>
+  </ul> -->
 </div>

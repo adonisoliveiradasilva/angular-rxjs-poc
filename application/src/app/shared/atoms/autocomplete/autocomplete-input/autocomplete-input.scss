@@ -1,0 +1,52 @@
+@use '../../../../../styles.scss' as *;
+
+.autocomplete-input-content{
+    position: relative;
+
+    .autocomplete-input-content-input{
+        width: 35rem;
+        @include flex-space-between;
+        position: relative;
+
+        input{
+            color: var(--color-text-title);
+            font-weight: 400;
+            @include font-size-larger;
+            background: transparent;
+            border: none;
+            width: calc(100% - 2rem);
+            height: auto;
+            border-bottom: solid var(--color-surface-default) clamp(1px, .3vh, 1.5px);
+            @include padding-2;
+            @include border-radius-3;
+            padding-right: 5rem;
+        }
+
+        .fa-magnifying-glass{
+            position: absolute;
+            @include font-size-larger;
+            right: 3rem;
+            color: var(--color-text-title);
+        }
+    }
+
+    .autocomplete-input-menu{
+        position: absolute;
+        left: 1rem;
+        top: 3.5rem;
+        width: 31rem;
+        background-color: var(--color-surface-overlay);
+        @include shadow-bottom;
+
+        .autocomplete-input-menu-item{
+            padding: 1rem 2rem;
+            @include font-size-larger;
+            color: var(--color-text-title)!important;
+            cursor: pointer;
+
+            &:hover{
+                background-color: var(--color-text-overlay);
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+<div class="autocomplete-input-content">
+    <div class="autocomplete-input-content-input">
+        <input type="text" [formControl]="searchControl" placeholder="Digite para buscar..."> 
+        <fa-icon [icon]="faMagnifyingGlass" class="fa-magnifying-glass"></fa-icon>
+    </div>
+
+    <div class="autocomplete-input-menu" *ngIf="(results$ | async) as results">
+        <ng-container *ngIf="menuOpen && results.length">
+            @for (result of results; track result.slug) {
+            <div class="autocomplete-input-menu-item" (click)="onClick(result)">
+                {{ result.label }}
+            </div>
+            }
+        </ng-container>
+    </div>
+
+</div>
