@@ -1,0 +1,13 @@
+@use '../../../../../styles.scss' as *;
+
+
+.autocomplete-card-content{
+    width: 35rem;
+    border: solid var(--color-surface-default) clamp(1px, .3vh, 1.5px);
+    @include padding-2;
+    @include border-radius-3;
+    color: var(--color-text-title);
+    font-weight: 400;
+    @include font-size-larger;
+    text-align: left;
+}

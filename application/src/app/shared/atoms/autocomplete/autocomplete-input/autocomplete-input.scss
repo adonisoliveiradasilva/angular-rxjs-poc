@@ -14,18 +14,18 @@
             @include font-size-larger;
             background: transparent;
             border: none;
-            width: calc(100% - 2rem);
+            width: calc(100%);
             height: auto;
             border-bottom: solid var(--color-surface-default) clamp(1px, .3vh, 1.5px);
             @include padding-2;
             @include border-radius-3;
-            padding-right: 5rem;
+            // padding-right: 5rem;
         }
 
         .fa-magnifying-glass{
             position: absolute;
             @include font-size-larger;
-            right: 3rem;
+            right: 1rem;
             color: var(--color-text-title);
         }
     }

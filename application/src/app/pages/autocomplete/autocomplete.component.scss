@@ -1,0 +1,7 @@
+@use '../../../styles.scss' as *;
+
+.autocomplete-content{
+    width: 100%;
+    @include flex-center-top;
+    @include gap-3;
+}

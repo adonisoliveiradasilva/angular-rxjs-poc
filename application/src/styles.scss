@@ -182,3 +182,17 @@ body, * {
     }
 }
 
+* {
+  scrollbar-width: .5rem;
+  scrollbar-color: rgb(243, 33, 121) #f0f0f0;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(243, 33, 121);
+  border-radius: 10px;
+}
+

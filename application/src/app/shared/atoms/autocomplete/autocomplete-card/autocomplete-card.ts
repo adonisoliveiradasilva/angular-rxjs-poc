@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-autocomplete-card',
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './autocomplete-card.scss'
 })
 export class AutocompleteCard {
-
+  @Input() description!: string;
 }

@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AutocompleteInput } from '../../shared/atoms/autocomplete/autocomplete-input/autocomplete-input';
 import { autocompleteArray } from '../../core/data/autocomplete.data';
+import { AutocompleteCard } from '../../shared/atoms/autocomplete/autocomplete-card/autocomplete-card';
 @Component({
     selector: 'app-autocomplete',
-    imports: [CommonModule, AutocompleteInput],
+    imports: [CommonModule, AutocompleteInput, AutocompleteCard],
     templateUrl: './autocomplete.component.html',
     styleUrl: './autocomplete.component.scss'
 })

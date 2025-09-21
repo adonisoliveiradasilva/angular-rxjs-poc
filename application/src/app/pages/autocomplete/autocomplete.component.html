@@ -1,14 +1,12 @@
-<div class="autocomplete">
+<div class="autocomplete-content">
   <!-- <input
     type="text"
     [formControl]="searchControl"
     placeholder="Digite para buscar..."
   /> -->
   <app-autocomplete-input (slugItem)="handleSlug($event)"></app-autocomplete-input>
+  <app-autocomplete-card [description]="getDescription" *ngIf="getDescription"></app-autocomplete-card>
 
-  <span>
-    {{ getDescription }}
-  </span>
   <!-- <ul *ngIf="results$ | async as results">
     <li *ngFor="let result of results">{{ result }}</li>
   </ul> -->
