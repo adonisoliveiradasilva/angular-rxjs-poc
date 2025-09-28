@@ -2,4 +2,12 @@
 . "$(dirname "$0")/_/husky.sh"
 
 npx lint-staged
-echo "✅ Hook pre-commit executado!"
+STATUS=$?
+
+if [ $STATUS -eq 0 ]; then
+  echo "✅ Hook pre-commit executado!"
+else
+  echo "❌ Erros no pre-commit, commit abortado."
+fi
+
+exit $STATUS
