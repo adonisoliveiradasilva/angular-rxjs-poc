@@ -10,4 +10,5 @@ export class AutocompleteCard {
   @Input() description!: string;
 
   teste: any
+  teste2: any
 }
