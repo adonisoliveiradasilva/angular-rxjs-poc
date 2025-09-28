@@ -1,0 +1,5 @@
+# Forçar LF nos hooks do Husky
+.husky/* text eol=lf
+
+# Manter o resto do projeto padrão
+* text=auto
