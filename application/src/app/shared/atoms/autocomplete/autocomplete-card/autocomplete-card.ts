@@ -8,4 +8,6 @@ import { Component, Input } from '@angular/core';
 })
 export class AutocompleteCard {
   @Input() description!: string;
+
+  teste: any
 }

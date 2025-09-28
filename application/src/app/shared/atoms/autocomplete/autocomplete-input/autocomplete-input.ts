@@ -23,11 +23,11 @@ export class AutocompleteInput {
 
   menuOpen: boolean = false;
   
-  constructor(private autocomplete: AutocompleteService) {
+  constructor(private autocompleteService: AutocompleteService) {
       this.results$ = this.searchControl.valueChanges.pipe(
         debounceTime(300), // espera o usuário parar de digitar
         distinctUntilChanged(), // só dispara se for valor diferente
-        switchMap(term => this.autocomplete.search(term ?? '')) // cancela requisições antigas
+        switchMap(term => this.autocompleteService.search(term ?? '')) // cancela requisições antigas
       );
 
       this.results$.subscribe(results => {
