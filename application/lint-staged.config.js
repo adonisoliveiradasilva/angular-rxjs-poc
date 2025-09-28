@@ -1,15 +1,15 @@
 module.exports = {
   '*.{ts,js}': [
-    'eslint --fix',
-    'prettier --write'
-  ].map(cmd => `cd application && npx ${cmd}`),
+    'npx eslint --fix',
+    'npx prettier --write'
+  ],
   '*.html': [
-    'prettier --write'
-  ].map(cmd => `cd application && npx ${cmd}`),
+    'npx prettier --write'
+  ],
   '*.scss': [
-    'prettier --write'
-  ].map(cmd => `cd application && npx ${cmd}`),
+    'npx prettier --write'
+  ],
   '*.json': [
-    'prettier --write'
-  ].map(cmd => `cd application && npx ${cmd}`)
+    'npx prettier --write'
+  ]
 };
