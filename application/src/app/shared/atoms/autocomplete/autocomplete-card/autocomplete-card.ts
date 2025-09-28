@@ -13,14 +13,7 @@ export class AutocompleteCard {
   teste2: any
 
   a(){
-      console.log( )
-            console.log( )
-
-                  console.log( )
-                  console.log( )
-            console.log( )
-
-                  console.log( )
-
+      const x = 1
+      const y = 2
   }
 }
