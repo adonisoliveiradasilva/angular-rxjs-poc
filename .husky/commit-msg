@@ -1,3 +1,0 @@
-#!/bin/sh
-echo "✅ Hook pre-commit executado!"
-npx commitlint --edit "$1"
