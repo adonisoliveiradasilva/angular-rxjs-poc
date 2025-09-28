@@ -11,4 +11,8 @@ export class AutocompleteCard {
 
   teste: any
   teste2: any
+
+  a(){
+      console.log( )
+  }
 }
