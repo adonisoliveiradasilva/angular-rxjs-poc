@@ -1,0 +1,2 @@
+#!/bin/sh
+bash -c "npx lint-staged && echo '✅ Hook pre-commit executado!'"

@@ -1,0 +1,2 @@
+#!/bin/sh
+bash -c "npx commitlint --edit $1 && echo '✅ Hook commit-msg executado!'"
